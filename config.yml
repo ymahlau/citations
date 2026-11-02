@@ -1,0 +1,28 @@
+# Who you are. "name" is shown on the page and used by --find-author.
+name: Yannik Mahlau
+scholar_url: https://scholar.google.com/citations?user=KU_OIyEAAAAJ&hl=en
+
+# Used to mark self-citations (any author with this last name and first initial).
+self_name:
+  first: Yannik
+  last: Mahlau
+
+# Where the page will live; used for links in the Atom feed.
+site_url: https://ymahlau.github.io/citations/
+
+# Optional, sent to the APIs in the User-Agent so they can contact you about problems.
+contact_email: ""
+
+# Your author IDs. Run `python fetch_citations.py --find-author` to find them.
+# Profiles are sometimes split, so list every ID that belongs to you.
+openalex_author_ids: []        # e.g. ["A5012345678"]
+semantic_scholar_author_ids: [] # e.g. ["1234567890"]
+
+# Papers the author IDs miss. Use doi:... or arxiv:... (without version suffix).
+extra_papers: []
+#  - doi:10.1364/OE.000000
+#  - arxiv:2506.00000
+
+# Papers wrongly attributed to you: a title (or part of it), an OpenAlex work ID,
+# or a key such as doi:10.1000/xyz.
+exclude_papers: []
