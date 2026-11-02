@@ -57,15 +57,24 @@
   .summary b { color: var(--ink); font-weight: 600; }
 
   /* Arrival strip: one dot per citing paper, stacked by month */
-  .strip { margin: 2.25rem 0 .5rem; overflow-x: auto; }
-  .strip-inner { display: flex; align-items: flex-end; gap: 4px; min-width: 18rem; padding-bottom: 1.4rem; position: relative; }
+  .strip { margin: .75rem 0 .5rem; overflow-x: auto; }
+  .strip-inner { display: flex; align-items: flex-end; gap: 4px; min-width: 18rem; padding: 3rem 0 1.4rem; position: relative; }
+  .tip {
+    position: absolute; top: 0; transform: translateX(-50%);
+    background: var(--ink); color: var(--paper); border-radius: 6px;
+    padding: .3rem .6rem; font-size: .8125rem; line-height: 1.35; white-space: nowrap;
+    pointer-events: none; opacity: 0; transition: opacity .12s;
+  }
+  .tip.show { opacity: 1; }
+  .tip b { font-weight: 600; display: block; }
+  @media (prefers-reduced-motion: reduce) { .tip { transition: none; } }
   .month {
     position: relative; display: flex; flex-direction: column-reverse; gap: 3px;
     flex: 1 1 0; min-height: 6px; padding: 0; border: 0; background: none; cursor: pointer;
     border-bottom: 2px solid var(--rule);
   }
   .month:hover, .month[aria-pressed="true"] { border-bottom-color: var(--accent); }
-  .month[disabled] { cursor: default; }
+  .month[aria-disabled="true"] { cursor: default; }
   .dot { display: block; width: 100%; height: 6px; border-radius: 2px; background: var(--accent); }
   .dot.est { background: transparent; box-shadow: inset 0 0 0 1.5px var(--faint); }
   .month .yr { position: absolute; top: calc(100% + .3rem); left: 0; font-size: .75rem; color: var(--muted); white-space: nowrap; }
@@ -164,7 +173,10 @@
 
   const fmtMonth = ym => new Date(ym + "-01T00:00:00").toLocaleDateString("en-GB", { month: "long", year: "numeric" });
   const fmtDay = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
-  const fmtFull = d => new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+  const fmtFull = d => new Date(d.length === 10 ? d + "T00:00:00" : d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+  // OpenAlex stores year-only dates as YYYY-01-01, so show just the year for those.
+  const hasDay = d => d && !/-01-01$/.test(d);
+  const fmtPub = c => hasDay(c.publication_date) ? fmtFull(c.publication_date) : (c.year ? String(c.year) : "");
   const fold = s => (s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
   function el(tag, attrs = {}, ...kids) {
@@ -205,20 +217,41 @@
       months.push(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`);
     }
     const inner = el("div", { class: "strip-inner" });
+    const tip = el("div", { class: "tip", "aria-hidden": "true" });
+    inner.append(tip);
+    const showTip = (b, ym, items) => {
+      const est = items.filter(c => c.first_seen_estimated).length;
+      const n = items.length;
+      let line = n ? `${n} paper${n === 1 ? "" : "s"}` : "No papers";
+      if (est) line += est === n ? ", already citing before tracking" : ` (${est} already citing before tracking)`;
+      tip.replaceChildren(el("b", { text: fmtMonth(ym) }), line);
+      tip.classList.add("show");
+      const half = tip.offsetWidth / 2;
+      const center = b.offsetLeft + b.offsetWidth / 2;
+      tip.style.left = Math.min(Math.max(center, half), inner.scrollWidth - half) + "px";
+    };
+    const hideTip = () => tip.classList.remove("show");
     months.forEach((ym, i) => {
       const items = byMonth[ym] || [];
       const b = el("button", {
         class: "month", type: "button",
         "aria-pressed": String(state.month === ym),
-        "aria-label": `${fmtMonth(ym)}: ${items.length} paper${items.length === 1 ? "" : "s"}`,
-        title: `${fmtMonth(ym)}: ${items.length}`
+        "aria-label": `${fmtMonth(ym)}: ${items.length} paper${items.length === 1 ? "" : "s"}`
       });
-      if (!items.length) b.disabled = true;
+      if (!items.length) b.setAttribute("aria-disabled", "true");
+      b.addEventListener("pointerenter", () => showTip(b, ym, items));
+      b.addEventListener("focus", () => showTip(b, ym, items));
+      b.addEventListener("pointerleave", hideTip);
+      b.addEventListener("blur", hideTip);
       items.slice().sort((a, b) => a.first_seen_estimated - b.first_seen_estimated)
         .forEach(c => b.append(el("span", { class: "dot" + (c.first_seen_estimated ? " est" : "") })));
       const mon = Number(ym.slice(5));
       if (mon === 1 || (i === 0 && mon < 11)) b.append(el("span", { class: "yr", text: ym.slice(0, 4) }));
-      b.addEventListener("click", () => { state.month = state.month === ym ? null : ym; render(); });
+      b.addEventListener("click", () => {
+        if (!items.length) return;
+        state.month = state.month === ym ? null : ym;
+        render();
+      });
       inner.append(b);
     });
     strip.append(inner);
@@ -234,7 +267,8 @@
     });
     const title = el("h3", {}, el("a", { href: c.url || "#", text: c.title, rel: "noopener" }));
     if (c.self_citation) title.append(el("span", { class: "tag", text: "self-citation" }));
-    const venue = [c.venue, c.year].filter(Boolean).join(", ");
+    const pub = fmtPub(c);
+    const venue = [c.venue, pub && `published ${pub}`].filter(Boolean).join(", ");
     const target = el("p", { class: "target" }, "Cites ");
     c.cites.forEach(pid => target.append(el("span", { text: paperTitles[pid] || pid })));
     const when = el("div", { class: "when" }, dateLabel);
@@ -270,7 +304,7 @@
     if (state.sort === "published") {
       items.sort((a, b) => pubKey(b).localeCompare(pubKey(a)));
       group(items, c => c.year || "Unknown year", k => String(k))
-        .forEach(g => list.append(section(g.label, g.items, c => c.publication_date ? fmtDay(c.publication_date) : "")));
+        .forEach(g => list.append(section(g.label, g.items, c => hasDay(c.publication_date) ? fmtDay(c.publication_date) : "")));
       return;
     }
     const tracked = items.filter(c => !c.first_seen_estimated).sort((a, b) => b.first_seen.localeCompare(a.first_seen));
@@ -324,8 +358,7 @@
     $("legend").hidden = false;
 
     const footer = $("footer");
-    footer.append("Data from ", el("a", { href: "https://openalex.org", text: "OpenAlex" }), " and ",
-      el("a", { href: "https://www.semanticscholar.org", text: "Semantic Scholar" }),
+    footer.append("Data from ", el("a", { href: "https://openalex.org", text: "OpenAlex" }),
       ", so counts can differ from Google Scholar. Dates added are the first weekly check that found each paper. ",
       el("a", { href: "feed.xml", text: "Subscribe to new citations (Atom feed)" }), ".");
     if (d.scholar_url) footer.append(" ", el("a", { href: d.scholar_url, text: "Google Scholar profile" }), ".");
