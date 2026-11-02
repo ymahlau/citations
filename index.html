@@ -78,9 +78,6 @@
   .dot { display: block; width: 100%; height: 6px; border-radius: 2px; background: var(--accent); }
   .dot.est { background: transparent; box-shadow: inset 0 0 0 1.5px var(--faint); }
   .month .yr { position: absolute; top: calc(100% + .3rem); left: 0; font-size: .75rem; color: var(--muted); white-space: nowrap; }
-  .legend { display: flex; flex-wrap: wrap; gap: .35rem 1.25rem; font-size: .8125rem; color: var(--muted); margin: 0 0 2rem; }
-  .legend span::before { content: ""; display: inline-block; width: .7rem; height: 6px; border-radius: 2px; margin-right: .4rem; vertical-align: middle; background: var(--accent); }
-  .legend .l-est::before { background: transparent; box-shadow: inset 0 0 0 1.5px var(--faint); }
 
   .controls {
     display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .75rem 1rem;
@@ -103,8 +100,8 @@
   h2 small { font: 400 .8125rem var(--sans); color: var(--muted); }
   .section-note { margin: 0 0 .5rem; font-size: .875rem; color: var(--muted); max-width: 38rem; }
 
-  .cite { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--rule); }
-  .when { font-size: .8125rem; color: var(--muted); padding-top: .2rem; }
+  .cite { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--rule); }
+  .when { font-size: .8125rem; color: var(--muted); padding-top: .2rem; white-space: nowrap; }
   .when .new { display: block; color: var(--accent); font-weight: 600; }
   .cite h3 { margin: 0; font: 400 1.1875rem/1.3 var(--serif); }
   .cite h3 a { text-decoration: none; }
@@ -138,10 +135,6 @@
   </header>
 
   <div class="strip" id="strip" aria-label="Citing papers per month"></div>
-  <div class="legend" id="legend" hidden>
-    <span>Added since tracking began</span>
-    <span class="l-est">Already citing before (placed by publication date)</span>
-  </div>
 
   <div class="controls" id="controls" hidden>
     <label>Search titles and authors
@@ -172,7 +165,7 @@
   let data = null, paperTitles = {};
 
   const fmtMonth = ym => new Date(ym + "-01T00:00:00").toLocaleDateString("en-GB", { month: "long", year: "numeric" });
-  const fmtDay = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+  const fmtDay = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
   const fmtFull = d => new Date(d.length === 10 ? d + "T00:00:00" : d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
   // OpenAlex stores year-only dates as YYYY-01-01, so show just the year for those.
   const hasDay = d => d && !/-01-01$/.test(d);
@@ -223,7 +216,6 @@
       const est = items.filter(c => c.first_seen_estimated).length;
       const n = items.length;
       let line = n ? `${n} paper${n === 1 ? "" : "s"}` : "No papers";
-      if (est) line += est === n ? ", already citing before tracking" : ` (${est} already citing before tracking)`;
       tip.replaceChildren(el("b", { text: fmtMonth(ym) }), line);
       tip.classList.add("show");
       const half = tip.offsetWidth / 2;
@@ -268,7 +260,7 @@
     const title = el("h3", {}, el("a", { href: c.url || "#", text: c.title, rel: "noopener" }));
     if (c.self_citation) title.append(el("span", { class: "tag", text: "self-citation" }));
     const pub = fmtPub(c);
-    const venue = [c.venue, pub && `published ${pub}`].filter(Boolean).join(", ");
+    const venue = [c.venue].filter(Boolean).join(", ");
     const target = el("p", { class: "target" }, "Cites ");
     c.cites.forEach(pid => target.append(el("span", { text: paperTitles[pid] || pid })));
     const when = el("div", { class: "when" }, dateLabel);
@@ -304,7 +296,7 @@
     if (state.sort === "published") {
       items.sort((a, b) => pubKey(b).localeCompare(pubKey(a)));
       group(items, c => c.year || "Unknown year", k => String(k))
-        .forEach(g => list.append(section(g.label, g.items, c => hasDay(c.publication_date) ? fmtDay(c.publication_date) : "")));
+        .forEach(g => list.append(section(g.label, g.items, c => hasDay(c.publication_date) ? fmtDay(c.publication_date) : (c.year ? String(c.year) : ""))));
       return;
     }
     const tracked = items.filter(c => !c.first_seen_estimated).sort((a, b) => b.first_seen.localeCompare(a.first_seen));
@@ -313,7 +305,7 @@
       .forEach(g => list.append(section(g.label, g.items, c => fmtDay(c.first_seen))));
     if (before.length) {
       list.append(section("Already citing when tracking began", before,
-        c => c.year ? String(c.year) : "",
+        c => hasDay(c.publication_date) ? fmtDay(c.publication_date) : (c.year ? String(c.year) : ""),
         `These were found on the first run (${fmtFull(data.tracking_since)}), so their date added is unknown. They are ordered by publication date.`));
     }
   }
@@ -355,7 +347,6 @@
     $("sort").addEventListener("change", e => { state.sort = e.target.value; renderList(); });
     $("self").addEventListener("change", e => { state.self = e.target.checked; render(); });
     $("controls").hidden = false;
-    $("legend").hidden = false;
 
     const footer = $("footer");
     footer.append("Data from ", el("a", { href: "https://openalex.org", text: "OpenAlex" }),
