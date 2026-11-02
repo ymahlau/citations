@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collect the papers that cite your work, from OpenAlex and Semantic Scholar.
+"""Collect the papers that cite your work, from OpenAlex.
 
 Usage:
     python fetch_citations.py --find-author   # print candidate author IDs for config.yml
@@ -8,7 +8,6 @@ Usage:
 
 Environment variables:
     OPENALEX_API_KEY  free key from https://openalex.org/settings/api (required by OpenAlex)
-    S2_API_KEY        optional Semantic Scholar key (higher rate limits)
 """
 from __future__ import annotations
 
@@ -33,10 +32,8 @@ DATA_FILE = ROOT / "citations.json"
 FEED_FILE = ROOT / "feed.xml"
 
 OA_BASE = "https://api.openalex.org"
-S2_BASE = "https://api.semanticscholar.org/graph/v1"
 
 OA_WORK_FIELDS = "id,doi,display_name,publication_year,publication_date,primary_location,authorships,type"
-S2_PAPER_FIELDS = "paperId,title,year,publicationDate,venue,externalIds,authors,url"
 SKIP_OA_TYPES = {"paratext", "erratum", "retraction", "peer-review", "supplementary-materials"}
 
 ARXIV_DOI = re.compile(r"^10\.48550/arxiv\.(.+)$")
@@ -51,18 +48,14 @@ def log(msg: str) -> None:
 
 
 class Client:
-    def __init__(self, oa_key: str | None, s2_key: str | None, email: str | None):
+    def __init__(self, oa_key: str | None, email: str | None):
         self.session = requests.Session()
         agent = "citation-tracker (github.com; personal citation list)"
         if email:
             agent += f" mailto:{email}"
         self.session.headers["User-Agent"] = agent
         self.oa_key = oa_key
-        self.s2_key = s2_key
-        # Unauthenticated Semantic Scholar shares a small pool, so go slowly.
-        self.s2_gap = 1.1 if s2_key else 3.5
-        self._last_s2 = 0.0
-        self.calls = {"openalex": 0, "semanticscholar": 0}
+        self.calls = {"openalex": 0}
 
     def _get(self, url: str, params: dict, headers: dict | None = None, retries: int = 6):
         delay = 5.0
@@ -103,28 +96,6 @@ class Client:
                 break
             results.extend(data["results"])
             cursor = data.get("meta", {}).get("next_cursor")
-        return results
-
-    # Semantic Scholar ---------------------------------------------------------
-    def s2(self, path: str, **params):
-        wait = self.s2_gap - (time.time() - self._last_s2)
-        if wait > 0:
-            time.sleep(wait)
-        self._last_s2 = time.time()
-        headers = {"x-api-key": self.s2_key} if self.s2_key else None
-        self.calls["semanticscholar"] += 1
-        return self._get(S2_BASE + path, params, headers)
-
-    def s2_paged(self, path: str, fields: str, limit: int = 1000) -> list[dict]:
-        results, offset = [], 0
-        while True:
-            data = self.s2(path, fields=fields, limit=limit, offset=offset)
-            if not data or not data.get("data"):
-                break
-            results.extend(data["data"])
-            if "next" not in data:
-                break
-            offset = data["next"]
         return results
 
 
@@ -187,33 +158,7 @@ def from_openalex(w: dict) -> dict:
         "arxiv": arxiv,
         "url": f"https://doi.org/{doi}" if doi else (landing or w.get("id")),
         "openalex": [w["id"].rsplit("/", 1)[-1]],
-        "s2": [],
         "type": w.get("type"),
-    }
-
-
-def from_s2(p: dict) -> dict:
-    ext = p.get("externalIds") or {}
-    doi = norm_doi(ext.get("DOI"))
-    arxiv = ext.get("ArXiv")
-    if doi:
-        url = f"https://doi.org/{doi}"
-    elif arxiv:
-        url = f"https://arxiv.org/abs/{arxiv}"
-    else:
-        url = p.get("url")
-    return {
-        "title": clean_text(p.get("title")),
-        "authors": [a.get("name") for a in p.get("authors") or [] if a.get("name")],
-        "year": p.get("year"),
-        "publication_date": p.get("publicationDate"),
-        "venue": p.get("venue") or None,
-        "doi": doi,
-        "arxiv": arxiv,
-        "url": url,
-        "openalex": [],
-        "s2": [p["paperId"]] if p.get("paperId") else [],
-        "type": None,
     }
 
 
@@ -242,7 +187,7 @@ def merge_into(a: dict, b: dict) -> None:
     elif not a.get("url"):
         a["url"] = b.get("url")
     a["arxiv"] = a.get("arxiv") or b.get("arxiv")
-    for field in ("openalex", "s2", "sources", "cites", "keys"):
+    for field in ("openalex", "sources", "cites", "keys"):
         merged = list(dict.fromkeys((a.get(field) or []) + (b.get(field) or [])))
         a[field] = merged
 
@@ -297,41 +242,26 @@ def matches_exclude(rec: dict, excludes: list[str]) -> bool:
 def collect_own_papers(client: Client, cfg: dict) -> list[dict]:
     reg = Registry()
     oa_ids = [str(x).rsplit("/", 1)[-1] for x in cfg.get("openalex_author_ids") or []]
-    s2_ids = [str(x) for x in cfg.get("semantic_scholar_author_ids") or []]
 
     if oa_ids:
-        try:
-            works = client.oa_works("author.id:" + "|".join(oa_ids))
-            for w in works:
-                if w.get("type") in SKIP_OA_TYPES:
-                    continue
-                rec = from_openalex(w)
-                rec["sources"] = ["openalex"]
-                reg.add(rec)
-            log(f"OpenAlex: {len(works)} works for your author ID(s)")
-        except Exception as exc:  # keep going with the other source
-            log(f"WARNING: OpenAlex author lookup failed: {exc}")
-
-    for aid in s2_ids:
-        try:
-            papers = client.s2_paged(f"/author/{aid}/papers", S2_PAPER_FIELDS)
-            for p in papers:
-                rec = from_s2(p)
-                rec["sources"] = ["semanticscholar"]
-                reg.add(rec)
-            log(f"Semantic Scholar: {len(papers)} papers for author {aid}")
-        except Exception as exc:
-            log(f"WARNING: Semantic Scholar author lookup failed for {aid}: {exc}")
+        # No try/except: if this fails the run stops and citations.json stays unchanged.
+        works = client.oa_works("author.id:" + "|".join(oa_ids))
+        for w in works:
+            if w.get("type") in SKIP_OA_TYPES:
+                continue
+            rec = from_openalex(w)
+            rec["sources"] = ["openalex"]
+            reg.add(rec)
+        log(f"OpenAlex: {len(works)} works for your author ID(s)")
 
     for ident in cfg.get("extra_papers") or []:
         ident = str(ident).strip()
         kind, _, value = ident.partition(":")
         kind = kind.lower()
-        oa_path, s2_id = None, None
         if kind == "doi":
-            oa_path, s2_id = f"/works/doi:{value}", f"DOI:{value}"
+            oa_path = f"/works/doi:{value}"
         elif kind == "arxiv":
-            oa_path, s2_id = f"/works/doi:10.48550/arXiv.{value}", f"ARXIV:{value}"
+            oa_path = f"/works/doi:10.48550/arXiv.{value}"
         else:
             log(f"WARNING: extra_papers entry '{ident}' should start with doi: or arxiv:")
             continue
@@ -343,14 +273,6 @@ def collect_own_papers(client: Client, cfg: dict) -> list[dict]:
                 reg.add(rec)
         except Exception as exc:
             log(f"WARNING: OpenAlex lookup failed for {ident}: {exc}")
-        try:
-            p = client.s2(f"/paper/{s2_id}", fields=S2_PAPER_FIELDS)
-            if p:
-                rec = from_s2(p)
-                rec["sources"] = ["semanticscholar"]
-                reg.add(rec)
-        except Exception as exc:
-            log(f"WARNING: Semantic Scholar lookup failed for {ident}: {exc}")
 
     excludes = [str(x) for x in cfg.get("exclude_papers") or []]
     papers = [p for p in reg.values() if p.get("title") and not matches_exclude(p, excludes)]
@@ -379,7 +301,7 @@ def is_self_citation(authors: list[str], first: str, last: str) -> bool:
 
 def collect_citations(client: Client, own: list[dict]) -> tuple[list[dict], dict]:
     reg = Registry()
-    ok = {"openalex": False, "semanticscholar": False}
+    ok = {"openalex": False}
     own_keys = {p["id"]: set(p["keys"]) for p in own}
 
     def add(rec: dict, paper: dict, source: str):
@@ -400,16 +322,6 @@ def collect_citations(client: Client, own: list[dict]) -> tuple[list[dict], dict
                 ok["openalex"] = True
             except Exception as exc:
                 log(f"WARNING: OpenAlex citations failed for {wid}: {exc}")
-        for pid in paper.get("s2") or []:
-            try:
-                rows = client.s2_paged(f"/paper/{pid}/citations", S2_PAPER_FIELDS)
-                for row in rows:
-                    cp = row.get("citingPaper") or {}
-                    if cp.get("paperId"):
-                        add(from_s2(cp), paper, "semanticscholar")
-                ok["semanticscholar"] = True
-            except Exception as exc:
-                log(f"WARNING: Semantic Scholar citations failed for {pid}: {exc}")
         log(f"  {paper['title'][:70]}")
     return reg.values(), ok
 
@@ -536,16 +448,7 @@ def find_author(client: Client, cfg: dict) -> None:
         for w in (top or {}).get("results", []):
             print(f"    - {clean_text(w.get('display_name'))} ({w.get('publication_year')})")
 
-    print(f"\nSemantic Scholar authors matching '{name}':")
-    data = client.s2("/author/search", query=name, limit=10,
-                     fields="name,affiliations,paperCount,citationCount,papers.title,papers.year")
-    for a in (data or {}).get("data", []):
-        print(f"\n  {a.get('authorId')}  {a.get('name')}  papers={a.get('paperCount')}  citations={a.get('citationCount')}")
-        if a.get("affiliations"):
-            print(f"    affiliations: {', '.join(a['affiliations'])}")
-        for p in (a.get("papers") or [])[:50]:
-            print(f"    - {p.get('title')} ({p.get('year')})")
-    print("\nCopy the IDs that are yours into config.yml (several per source is fine if your profile is split).")
+    print("\nCopy the IDs that are yours into config.yml (several are fine if your profile is split).")
 
 
 def update(client: Client, cfg: dict, force_baseline: bool) -> None:
@@ -560,7 +463,7 @@ def update(client: Client, cfg: dict, force_baseline: bool) -> None:
 
     citing, ok = collect_citations(client, own)
     if not any(ok.values()):
-        sys.exit("Both sources failed; leaving citations.json unchanged.")
+        sys.exit("OpenAlex citation lookups failed; leaving citations.json unchanged.")
 
     merged = merge_with_previous(citing, previous, baseline, today)
     me = cfg.get("self_name") or {}
@@ -607,7 +510,7 @@ def main() -> None:
     oa_key = os.environ.get("OPENALEX_API_KEY") or None
     if not oa_key:
         log("WARNING: OPENALEX_API_KEY is not set; OpenAlex allows only a few test requests without it.")
-    client = Client(oa_key, os.environ.get("S2_API_KEY") or None, cfg.get("contact_email"))
+    client = Client(oa_key, cfg.get("contact_email"))
 
     if args.find_author:
         find_author(client, cfg)
