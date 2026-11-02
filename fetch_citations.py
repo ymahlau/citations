@@ -532,7 +532,7 @@ def find_author(client: Client, cfg: dict) -> None:
         if inst:
             print(f"    institution: {inst}")
         top = client.oa("/works", filter=f"author.id:{aid}", sort="cited_by_count:desc",
-                        select="display_name,publication_year", **{"per-page": 3})
+                        select="display_name,publication_year", **{"per-page": 50})
         for w in (top or {}).get("results", []):
             print(f"    - {clean_text(w.get('display_name'))} ({w.get('publication_year')})")
 
@@ -543,7 +543,7 @@ def find_author(client: Client, cfg: dict) -> None:
         print(f"\n  {a.get('authorId')}  {a.get('name')}  papers={a.get('paperCount')}  citations={a.get('citationCount')}")
         if a.get("affiliations"):
             print(f"    affiliations: {', '.join(a['affiliations'])}")
-        for p in (a.get("papers") or [])[:3]:
+        for p in (a.get("papers") or [])[:50]:
             print(f"    - {p.get('title')} ({p.get('year')})")
     print("\nCopy the IDs that are yours into config.yml (several per source is fine if your profile is split).")
 

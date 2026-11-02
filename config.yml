@@ -15,8 +15,8 @@ contact_email: ""
 
 # Your author IDs. Run `python fetch_citations.py --find-author` to find them.
 # Profiles are sometimes split, so list every ID that belongs to you.
-openalex_author_ids: []        # e.g. ["A5012345678"]
-semantic_scholar_author_ids: [] # e.g. ["1234567890"]
+openalex_author_ids: ["A5093884481"]        # e.g. ["A5012345678"]
+semantic_scholar_author_ids: ["2174734680"] # e.g. ["1234567890"]
 
 # Papers the author IDs miss. Use doi:... or arxiv:... (without version suffix).
 extra_papers: []
