@@ -1,0 +1,1617 @@
+{
+ "generated_at": "2026-11-02T09:17:51Z",
+ "tracking_since": "2026-11-02",
+ "name": "Yannik Mahlau",
+ "self_name": {
+  "first": "Yannik",
+  "last": "Mahlau"
+ },
+ "scholar_url": "https://scholar.google.com/citations?user=KU_OIyEAAAAJ&hl=en",
+ "papers": [
+  {
+   "id": "gdsfactory-an-open-source-python-library-for-chip-design-and",
+   "title": "GDSFactory: An Open-Source Python Library for Chip Design and Simulation",
+   "year": 2026,
+   "url": "https://doi.org/10.1109/sum69529.2026.11660109",
+   "citation_count": 0
+  },
+  {
+   "id": "gradient-informed-bayesian-and-interior-point-optimization-f",
+   "title": "Gradient-Informed Bayesian and Interior Point Optimization for Efficient Inverse Design in Nanophotonics",
+   "year": 2026,
+   "url": "https://doi.org/10.1364/oe.600198",
+   "citation_count": 2
+  },
+  {
+   "id": "inverse-designed-3d-printed-coupling-element-for-polymer-pho",
+   "title": "Inverse-designed 3D-printed coupling element for polymer photonic circuits realized via two-photon polymerization",
+   "year": 2026,
+   "url": "https://doi.org/10.1117/12.3079578",
+   "citation_count": 0
+  },
+  {
+   "id": "multiagent-reinforcement-learning-for-discrete-optimization-",
+   "title": "Multiagent reinforcement learning for discrete optimization of hole based photonic integrated circuits",
+   "year": 2026,
+   "url": "https://doi.org/10.1117/12.3106930",
+   "citation_count": 1
+  },
+  {
+   "id": "numerical-field-optimization-for-enhanced-efficiency-in-time",
+   "title": "Numerical field optimization for enhanced efficiency in time-reversible gradient computation of open-source GPU-accelerated FDTD simulations",
+   "year": 2026,
+   "url": "https://doi.org/10.1117/12.3101101",
+   "citation_count": 0
+  },
+  {
+   "id": "roadmap-on-5d-photonics-for-nano-and-beyond",
+   "title": "Roadmap on 5D Photonics for nano and beyond",
+   "year": 2026,
+   "url": "https://doi.org/10.1088/2399-1984/ae8631",
+   "citation_count": 1
+  },
+  {
+   "id": "fdtdx-high-performance-open-source-fdtd-simulation-with-auto",
+   "title": "FDTDX: High-Performance Open-Source FDTD Simulation with Automatic Differentiation",
+   "year": 2025,
+   "url": "https://doi.org/10.21105/joss.08912",
+   "citation_count": 13
+  },
+  {
+   "id": "inverse-design-of-robust-out-of-plane-coupling-elements",
+   "title": "Inverse design of robust out-of-plane coupling elements",
+   "year": 2025,
+   "url": "https://doi.org/10.1117/12.3053078",
+   "citation_count": 1
+  },
+  {
+   "id": "multi-agent-reinforcement-learning-for-inverse-design-in-pho",
+   "title": "Multi-Agent Reinforcement Learning for Inverse Design in Photonic Integrated Circuits",
+   "year": 2025,
+   "url": "https://doi.org/10.48550/arxiv.2506.18627",
+   "citation_count": 6
+  },
+  {
+   "id": "a-flexible-framework-for-large-scale-fdtd-simulations-open-s",
+   "title": "A flexible framework for large-scale FDTD simulations: open-source inverse design for 3D nanostructures",
+   "year": 2024,
+   "url": "https://doi.org/10.1117/12.3052639",
+   "citation_count": 21
+  },
+  {
+   "id": "mastering-zero-shot-interactions-in-cooperative-and-competit",
+   "title": "Mastering Zero-Shot Interactions in Cooperative and Competitive Simultaneous Games",
+   "year": 2024,
+   "url": "https://doi.org/10.48550/arxiv.2402.03136",
+   "citation_count": 2
+  },
+  {
+   "id": "quantized-inverse-design-for-photonic-integrated-circuits",
+   "title": "Quantized Inverse Design for Photonic Integrated Circuits",
+   "year": 2024,
+   "url": "https://doi.org/10.1021/acsomega.4c10958",
+   "citation_count": 18
+  },
+  {
+   "id": "re-on-explainability-of-graph-neural-networks-via-subgraph-e",
+   "title": "[Re] On Explainability of Graph Neural Networks via Subgraph Explorations",
+   "year": 2023,
+   "url": "https://doi.org/10.5281/zenodo.8173752",
+   "citation_count": 0
+  },
+  {
+   "id": "fidelity-of-ensemble-aggregation-for-saliency-map-explanatio",
+   "title": "Fidelity of Ensemble Aggregation for Saliency Map Explanations using Bayesian Optimization Techniques",
+   "year": 2022,
+   "url": "https://doi.org/10.48550/arxiv.2207.01565",
+   "citation_count": 1
+  }
+ ],
+ "citations": [
+  {
+   "title": "Inverse Design of Integrated Photonic Components for Visible-Light Applications",
+   "authors": [
+    "Christoph Stockinger",
+    "Marko Šimić",
+    "John O. Adeniran",
+    "N. Pruiti",
+    "M. Sorel",
+    "P. Banzer"
+   ],
+   "year": 2026,
+   "publication_date": "2026-10-08",
+   "venue": null,
+   "url": "https://arxiv.org/abs/2610.11453",
+   "doi": null,
+   "arxiv": "2610.11453",
+   "cites": [
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-10-08",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2610.11453",
+   "keys": [
+    "arxiv:2610.11453",
+    "title:inversedesignofintegratedphotoniccomponentsforvisiblelightapplications"
+   ]
+  },
+  {
+   "title": "rfx: An End-to-End Differentiable 3-D FDTD Simulator for RF and Microwave Engineering",
+   "authors": [
+    "B. Kim"
+   ],
+   "year": 2026,
+   "publication_date": "2026-10-01",
+   "venue": "IEEE transactions on microwave theory and techniques",
+   "url": "https://doi.org/10.1109/tmtt.2026.3729863",
+   "doi": "10.1109/tmtt.2026.3729863",
+   "arxiv": null,
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-10-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1109/tmtt.2026.3729863",
+   "keys": [
+    "doi:10.1109/tmtt.2026.3729863",
+    "title:rfxanendtoenddifferentiable3dfdtdsimulatorforrfandmicrowaveengineering"
+   ]
+  },
+  {
+   "title": "Physics-Informed Structural Attention Unlocks Efficient and Interpretable Inverse-Designed Photonic Devices",
+   "authors": [
+    "Chao Luo",
+    "Huiyun Tang",
+    "Xiaoyu Chen",
+    "Zehao Guan",
+    "Yanzhen Li",
+    "Wei Li",
+    "Ming Li"
+   ],
+   "year": 2026,
+   "publication_date": "2026-09-19",
+   "venue": "ACS Photonics",
+   "url": "https://doi.org/10.1021/acsphotonics.6c01289",
+   "doi": "10.1021/acsphotonics.6c01289",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-09-19",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1021/acsphotonics.6c01289",
+   "keys": [
+    "doi:10.1021/acsphotonics.6c01289",
+    "title:physicsinformedstructuralattentionunlocksefficientandinterpretableinversedesignedphotonicdevices"
+   ]
+  },
+  {
+   "title": "Band-Selective Microwave Cavity Optimization Using Differentiable FDTD: Gradient-Guided Search Versus Structured Random Search",
+   "authors": [
+    "H. Yigit",
+    "K. Karayahşi"
+   ],
+   "year": 2026,
+   "publication_date": "2026-08-20",
+   "venue": null,
+   "url": "https://arxiv.org/abs/2608.19820",
+   "doi": null,
+   "arxiv": "2608.19820",
+   "cites": [
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-08-20",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2608.19820",
+   "keys": [
+    "arxiv:2608.19820",
+    "title:bandselectivemicrowavecavityoptimizationusingdifferentiablefdtdgradientguidedsearchversusstructuredrandomsearch"
+   ]
+  },
+  {
+   "title": "Enhanced posterior sampling via diffusion models for efficient metasurfaces inverse design",
+   "authors": [
+    "Mathys Le Grand",
+    "Pascal Urard",
+    "D. Rideau",
+    "Loumi Tremas",
+    "Damien Maitre",
+    "Louis-Henri Fernandez-Mouron",
+    "Adam Fuchs",
+    "R. Orobtchouk"
+   ],
+   "year": 2026,
+   "publication_date": "2026-08-19",
+   "venue": "Optics Express",
+   "url": "https://doi.org/10.1364/oe.603124",
+   "doi": "10.1364/oe.603124",
+   "arxiv": null,
+   "cites": [
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "openalex"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-08-19",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1364/oe.603124",
+   "keys": [
+    "doi:10.1364/oe.603124",
+    "title:enhancedposteriorsamplingviadiffusionmodelsforefficientmetasurfacesinversedesign"
+   ]
+  },
+  {
+   "title": "Fabrication-Aware Inverse Design of Nanophotonic Devices for 3D Laser-Nanoprinting",
+   "authors": [
+    "Oliver Kuster",
+    "Tim Alletzhäusser",
+    "Carsten Rockstuhl",
+    "M. Wegener",
+    "T. Sturges"
+   ],
+   "year": 2026,
+   "publication_date": "2026-08-17",
+   "venue": null,
+   "url": "https://arxiv.org/abs/2608.16811",
+   "doi": null,
+   "arxiv": "2608.16811",
+   "cites": [
+    "gradient-informed-bayesian-and-interior-point-optimization-f",
+    "multiagent-reinforcement-learning-for-discrete-optimization-"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-08-17",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2608.16811",
+   "keys": [
+    "arxiv:2608.16811",
+    "title:fabricationawareinversedesignofnanophotonicdevicesfor3dlasernanoprinting"
+   ]
+  },
+  {
+   "title": "Broadband Electromagnetic Field Prediction at Unseen Wavelengths via Physics‐Guided Neural Operators",
+   "authors": [
+    "Joonhyuk Seo",
+    "Chanik Kang",
+    "Dongjin Seo",
+    "Haejun Chung"
+   ],
+   "year": 2026,
+   "publication_date": "2026-08-01",
+   "venue": "Nanophotonics",
+   "url": "https://doi.org/10.1002/nap2.70242",
+   "doi": "10.1002/nap2.70242",
+   "arxiv": null,
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-08-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1002/nap2.70242",
+   "keys": [
+    "doi:10.1002/nap2.70242",
+    "title:broadbandelectromagneticfieldpredictionatunseenwavelengthsviaphysicsguidedneuraloperators"
+   ]
+  },
+  {
+   "title": "Inverse Design and Optical Performance of Cascaded Wavelength Division Multiplexers",
+   "authors": [
+    "R Wang",
+    "Joel Y. Y. Loh"
+   ],
+   "year": 2026,
+   "publication_date": "2026-07-27",
+   "venue": "Optics",
+   "url": "https://doi.org/10.3390/opt7040054",
+   "doi": "10.3390/opt7040054",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-07-27",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.3390/opt7040054",
+   "keys": [
+    "doi:10.3390/opt7040054",
+    "title:inversedesignandopticalperformanceofcascadedwavelengthdivisionmultiplexers"
+   ]
+  },
+  {
+   "title": "One Aperture, Two Colors: Depth-Allocated Bilayer Silicon Nitride Gratings for Trapped-Ion Addressing",
+   "authors": [
+    "G. Yadav"
+   ],
+   "year": 2026,
+   "publication_date": "2026-07-26",
+   "venue": null,
+   "url": "https://arxiv.org/abs/2607.23529",
+   "doi": null,
+   "arxiv": "2607.23529",
+   "cites": [
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-07-26",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2607.23529",
+   "keys": [
+    "arxiv:2607.23529",
+    "title:oneaperturetwocolorsdepthallocatedbilayersiliconnitridegratingsfortrappedionaddressing"
+   ]
+  },
+  {
+   "title": "Inverse engineering of optical constants in photochromic micron-scale hybrid films",
+   "authors": [
+    "Bahrem Serhat Danis",
+    "Amin Tabatabaeı Mohsenı",
+    "Smagul  Zh. Karazhanov",
+    "Esra Özkan Zayim"
+   ],
+   "year": 2026,
+   "publication_date": "2026-07-13",
+   "venue": "Physical review. E",
+   "url": "https://doi.org/10.1103/kmw2-2tx1",
+   "doi": "10.1103/kmw2-2tx1",
+   "arxiv": null,
+   "cites": [
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "openalex"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-07-13",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1103/kmw2-2tx1",
+   "keys": [
+    "doi:10.1103/kmw2-2tx1",
+    "title:inverseengineeringofopticalconstantsinphotochromicmicronscalehybridfilms"
+   ]
+  },
+  {
+   "title": "Three-dimensional ground penetrating radar inversion for urban road defect via integrating physics constraints, style transfer, and multi-scale features aggregation",
+   "authors": [
+    "Jiahao Liu",
+    "Liang Song",
+    "yiming zhang",
+    "Tong Zheng"
+   ],
+   "year": 2026,
+   "publication_date": "2026-07-01",
+   "venue": "Measurement",
+   "url": "https://doi.org/10.1016/j.measurement.2026.122446",
+   "doi": "10.1016/j.measurement.2026.122446",
+   "arxiv": null,
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-07-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1016/j.measurement.2026.122446",
+   "keys": [
+    "doi:10.1016/j.measurement.2026.122446",
+    "title:threedimensionalgroundpenetratingradarinversionforurbanroaddefectviaintegratingphysicsconstraintsstyletransferandmultiscalefeaturesaggregation"
+   ]
+  },
+  {
+   "title": "GDSFactory: An Open-Source Python Library for Chip Design and Simulation",
+   "authors": [
+    "J. Matres",
+    "Simon Bilodeau",
+    "Niko Savola",
+    "Marc de",
+    "Wai Kwan Yeung",
+    "Erman Timurdogan",
+    "Jan David Fischbach",
+    "Helge Gehring",
+    "Lucas Grosjean",
+    "Yannik Mahlau",
+    "Floris Laporte",
+    "Sebastian Goeldi",
+    "Troy Tamas"
+   ],
+   "year": 2026,
+   "publication_date": "2026-07-01",
+   "venue": "IEEE/LEOS Summer Topical Meetings",
+   "url": "https://doi.org/10.1109/sum69529.2026.11660109",
+   "doi": "10.1109/sum69529.2026.11660109",
+   "arxiv": null,
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": true,
+   "first_seen": "2026-07-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1109/sum69529.2026.11660109",
+   "keys": [
+    "doi:10.1109/sum69529.2026.11660109",
+    "title:gdsfactoryanopensourcepythonlibraryforchipdesignandsimulation"
+   ]
+  },
+  {
+   "title": "A Review on Artificial Intelligence Techniques Employed for Enhancing NPC Behavior in Video Games",
+   "authors": [
+    "Ruben Raj Karthigasu",
+    "Muhammed Basheer Jasser",
+    "Samuel Mofoluwa Ajibade",
+    "Sina Abdipoor",
+    "Na-Chua Hui"
+   ],
+   "year": 2026,
+   "publication_date": "2026-06-26",
+   "venue": "2026 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS)",
+   "url": "https://doi.org/10.1109/i2cacis69435.2026.11600010",
+   "doi": "10.1109/i2cacis69435.2026.11600010",
+   "arxiv": null,
+   "cites": [
+    "mastering-zero-shot-interactions-in-cooperative-and-competit"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-06-26",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1109/i2cacis69435.2026.11600010",
+   "keys": [
+    "doi:10.1109/i2cacis69435.2026.11600010",
+    "title:areviewonartificialintelligencetechniquesemployedforenhancingnpcbehaviorinvideogames"
+   ]
+  },
+  {
+   "title": "AI-enhanced inverse design of photonic crystal fiber optical modulator using deep reinforcement learning technique",
+   "authors": [
+    "Nada Yazeed M. Dawood",
+    "B.M. Younis",
+    "Mohamed Farhat O. Hameed",
+    "H.A. El-Mikati",
+    "Salah S. A. Obayya",
+    "Nihal F. F. Areed"
+   ],
+   "year": 2026,
+   "publication_date": "2026-06-23",
+   "venue": "Scientific Reports",
+   "url": "https://doi.org/10.1038/s41598-026-52039-z",
+   "doi": "10.1038/s41598-026-52039-z",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-06-23",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1038/s41598-026-52039-z",
+   "keys": [
+    "doi:10.1038/s41598-026-52039-z",
+    "title:aienhancedinversedesignofphotoniccrystalfiberopticalmodulatorusingdeepreinforcementlearningtechnique"
+   ]
+  },
+  {
+   "title": "End-to-end meta-imagers: Information-theoretic objectives and generalized focusing optima",
+   "authors": [
+    "Lukas Kienesberger",
+    "Ze-Yu Kuang",
+    "Ya-Xin Liu",
+    "Owen D. Miller"
+   ],
+   "year": 2026,
+   "publication_date": "2026-06-15",
+   "venue": null,
+   "url": "https://arxiv.org/abs/2606.16724",
+   "doi": null,
+   "arxiv": "2606.16724",
+   "cites": [
+    "roadmap-on-5d-photonics-for-nano-and-beyond"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-06-15",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2606.16724",
+   "keys": [
+    "arxiv:2606.16724",
+    "title:endtoendmetaimagersinformationtheoreticobjectivesandgeneralizedfocusingoptima"
+   ]
+  },
+  {
+   "title": "An Efficient Framework for Simulating Optical Responses of Dynamically Evolving Periodic Nanoarrays",
+   "authors": [
+    "Yiting You",
+    "Yuhang Song",
+    "S Q Zhang",
+    "Cheng Wang",
+    "Yibin Jiang"
+   ],
+   "year": 2026,
+   "publication_date": "2026-06-09",
+   "venue": "The Journal of Physical Chemistry A",
+   "url": "https://doi.org/10.1021/acs.jpca.6c02377",
+   "doi": "10.1021/acs.jpca.6c02377",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-06-09",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1021/acs.jpca.6c02377",
+   "keys": [
+    "doi:10.1021/acs.jpca.6c02377",
+    "title:anefficientframeworkforsimulatingopticalresponsesofdynamicallyevolvingperiodicnanoarrays"
+   ]
+  },
+  {
+   "title": "Gradient-informed Bayesian and interior point optimization for efficient inverse design in nanophotonics",
+   "authors": [
+    "Yannik Mahlau",
+    "Yannick Augenstein",
+    "Tyler W. Hughes",
+    "Marius Lindauer",
+    "Bodo Rosenhahn"
+   ],
+   "year": 2026,
+   "publication_date": "2026-06-01",
+   "venue": "Optics Express",
+   "url": "https://doi.org/10.1364/oe.600198",
+   "doi": "10.1364/oe.600198",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits",
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "openalex"
+   ],
+   "self_citation": true,
+   "first_seen": "2026-06-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1364/oe.600198",
+   "keys": [
+    "doi:10.1364/oe.600198",
+    "title:gradientinformedbayesianandinteriorpointoptimizationforefficientinversedesigninnanophotonics"
+   ]
+  },
+  {
+   "title": "Autonomous agentic design for photonics",
+   "authors": [
+    "P. Kharel",
+    "Amin Khavasi",
+    "Xinzhong Chen",
+    "T. Hughes"
+   ],
+   "year": 2026,
+   "publication_date": "2026-05-30",
+   "venue": null,
+   "url": "https://arxiv.org/abs/2606.00915",
+   "doi": null,
+   "arxiv": "2606.00915",
+   "cites": [
+    "multi-agent-reinforcement-learning-for-inverse-design-in-pho"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-05-30",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2606.00915",
+   "keys": [
+    "arxiv:2606.00915",
+    "title:autonomousagenticdesignforphotonics"
+   ]
+  },
+  {
+   "title": "Multiagent reinforcement learning for discrete optimization of hole based photonic integrated circuits",
+   "authors": [
+    "Lukas Berg",
+    "Yannik Mahlau",
+    "Bodo Rosenhahn"
+   ],
+   "year": 2026,
+   "publication_date": "2026-05-28",
+   "venue": "Optical Systems Design",
+   "url": "https://doi.org/10.1117/12.3106930",
+   "doi": "10.1117/12.3106930",
+   "arxiv": null,
+   "cites": [
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": true,
+   "first_seen": "2026-05-28",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1117/12.3106930",
+   "keys": [
+    "doi:10.1117/12.3106930",
+    "title:multiagentreinforcementlearningfordiscreteoptimizationofholebasedphotonicintegratedcircuits"
+   ]
+  },
+  {
+   "title": "AI‐Assisted Topological Photonic Crystals: Design Methods, Applications, Challenges and Opportunities",
+   "authors": [
+    "Hang Sun",
+    "Sen Feng",
+    "Zheng‐Da Hu",
+    "Jingjing Wu",
+    "Yuting Yang",
+    "Guoqiang Xu",
+    "Feng Zhang",
+    "Moran Li",
+    "Jicheng Wang"
+   ],
+   "year": 2026,
+   "publication_date": "2026-05-25",
+   "venue": "Laser & Photonics Review",
+   "url": "https://doi.org/10.1002/lpor.71350",
+   "doi": "10.1002/lpor.71350",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-05-25",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1002/lpor.71350",
+   "keys": [
+    "doi:10.1002/lpor.71350",
+    "title:aiassistedtopologicalphotoniccrystalsdesignmethodsapplicationschallengesandopportunities"
+   ]
+  },
+  {
+   "title": "Numerical field optimization for enhanced efficiency in time-reversible gradient computation of open-source GPU-accelerated FDTD simulations",
+   "authors": [
+    "Yannik Mahlau",
+    "Lukas Berg",
+    "Bodo Rosenhahn"
+   ],
+   "year": 2026,
+   "publication_date": "2026-03-25",
+   "venue": "Optical Systems Design",
+   "url": "https://doi.org/10.1117/12.3101101",
+   "doi": "10.1117/12.3101101",
+   "arxiv": "2603.24027",
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits",
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s",
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto",
+    "gradient-informed-bayesian-and-interior-point-optimization-f",
+    "multi-agent-reinforcement-learning-for-inverse-design-in-pho"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": true,
+   "first_seen": "2026-03-25",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2603.24027",
+   "keys": [
+    "arxiv:2603.24027",
+    "doi:10.1117/12.3101101",
+    "title:numericalfieldoptimizationforenhancedefficiencyintimereversiblegradientcomputationofopensourcegpuacceleratedfdtdsimulations"
+   ]
+  },
+  {
+   "title": "Inverse-designed 3D-printed coupling element for polymer photonic circuits realized via two-photon polymerization",
+   "authors": [
+    "Yash Bhatia",
+    "Konrad Bethmann",
+    "Yannik Mahlau",
+    "Lei Zheng",
+    "Jörn Ostermann",
+    "Bernhard Roth"
+   ],
+   "year": 2026,
+   "publication_date": "2026-03-04",
+   "venue": "Smart Photonic and Optoelectronic Integrated Circuits",
+   "url": "https://doi.org/10.1117/12.3079578",
+   "doi": "10.1117/12.3079578",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits",
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s",
+    "inverse-design-of-robust-out-of-plane-coupling-elements",
+    "multi-agent-reinforcement-learning-for-inverse-design-in-pho"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": true,
+   "first_seen": "2026-03-04",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1117/12.3079578",
+   "keys": [
+    "doi:10.1117/12.3079578",
+    "title:inversedesigned3dprintedcouplingelementforpolymerphotoniccircuitsrealizedviatwophotonpolymerization"
+   ]
+  },
+  {
+   "title": "Automated optimization of terahertz nanoantenna design using a VAE–CNN reinforcement learning framework",
+   "authors": [
+    "Muhammad Aoun",
+    "Ammad Hussain"
+   ],
+   "year": 2026,
+   "publication_date": "2026-03-01",
+   "venue": "Optical and Quantum Electronics",
+   "url": "https://doi.org/10.1007/s11082-026-08736-0",
+   "doi": "10.1007/s11082-026-08736-0",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-03-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1007/s11082-026-08736-0",
+   "keys": [
+    "doi:10.1007/s11082-026-08736-0",
+    "title:automatedoptimizationofterahertznanoantennadesignusingavaecnnreinforcementlearningframework"
+   ]
+  },
+  {
+   "title": "Inverse design for scalable photonic systems",
+   "authors": [
+    "L. Schul",
+    "Sydney Mason",
+    "Sungjun Eun",
+    "Geun Ho Ahn",
+    "J. Vučković"
+   ],
+   "year": 2026,
+   "publication_date": "2026-02-21",
+   "venue": "Nature Reviews Materials",
+   "url": "https://doi.org/10.1038/s41578-026-00915-5",
+   "doi": "10.1038/s41578-026-00915-5",
+   "arxiv": "2602.18666",
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s",
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "semanticscholar",
+    "openalex"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-02-21",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2602.18666",
+   "keys": [
+    "arxiv:2602.18666",
+    "doi:10.1038/s41578-026-00915-5",
+    "title:inversedesignforscalablephotonicsystems"
+   ]
+  },
+  {
+   "title": "BONNI: Gradient-Informed Bayesian and Interior Point Optimization for Efficient Inverse Design in Nanophotonics",
+   "authors": [
+    "Yannik Mahlau",
+    "Y. Augenstein",
+    "T. Hughes",
+    "Marius Lindauer",
+    "Bodo Rosenhahn"
+   ],
+   "year": 2026,
+   "publication_date": "2026-02-20",
+   "venue": "Optics Express",
+   "url": "https://doi.org/10.48550/arxiv.2602.18148",
+   "doi": "10.48550/arxiv.2602.18148",
+   "arxiv": "2602.18148",
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits",
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s",
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto",
+    "multi-agent-reinforcement-learning-for-inverse-design-in-pho"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": true,
+   "first_seen": "2026-02-20",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2602.18148",
+   "keys": [
+    "arxiv:2602.18148",
+    "title:bonnigradientinformedbayesianandinteriorpointoptimizationforefficientinversedesigninnanophotonics"
+   ]
+  },
+  {
+   "title": "Predicting Wave Reflection and Transmission in Heterogeneous Media via Fourier Operator-Based Transformer Modeling",
+   "authors": [
+    "Zhe Bai",
+    "Hans Johansen"
+   ],
+   "year": 2026,
+   "publication_date": "2026-02-05",
+   "venue": "International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)",
+   "url": "https://doi.org/10.1109/acdsa67686.2026.11467920",
+   "doi": "10.1109/acdsa67686.2026.11467920",
+   "arxiv": "2604.00132",
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-02-05",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1109/acdsa67686.2026.11467920",
+   "keys": [
+    "doi:10.1109/acdsa67686.2026.11467920",
+    "title:predictingwavereflectionandtransmissioninheterogeneousmediaviafourieroperatorbasedtransformermodeling",
+    "arxiv:2604.00132"
+   ]
+  },
+  {
+   "title": "Intrinsically Design‐Rule‐Compliant Nanophotonic Inverse Design via Learned Generative Manifolds",
+   "authors": [
+    "Bahrem Serhat Danis",
+    "Demet Baldan Desdemir",
+    "Enes Akcakoca",
+    "Zeynep Ipek Yanmaz",
+    "Gulzade Polat",
+    "Ahmet Onur Dasdemir",
+    "Aytug Aydogan",
+    "Abdullah Mağden",
+    "Emir Salih Magden"
+   ],
+   "year": 2026,
+   "publication_date": "2026-02-03",
+   "venue": "Laser & Photonics Review",
+   "url": "https://doi.org/10.1002/lpor.71486",
+   "doi": "10.1002/lpor.71486",
+   "arxiv": "2602.03142",
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-02-03",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1002/lpor.71486",
+   "keys": [
+    "doi:10.1002/lpor.71486",
+    "title:intrinsicallydesignrulecompliantnanophotonicinversedesignvialearnedgenerativemanifolds",
+    "arxiv:2602.03142"
+   ]
+  },
+  {
+   "title": "FDTDX: High-Performance Open-Source FDTD Simulation with Automatic Differentiation",
+   "authors": [
+    "Yannik Mahlau",
+    "Frederik Schubert",
+    "Lukas Berg",
+    "Bodo Rosenhahn"
+   ],
+   "year": 2026,
+   "publication_date": "2026-01-13",
+   "venue": "The Journal of Open Source Software",
+   "url": "https://doi.org/10.21105/joss.08912",
+   "doi": "10.21105/joss.08912",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits",
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s",
+    "multi-agent-reinforcement-learning-for-inverse-design-in-pho"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": true,
+   "first_seen": "2026-01-13",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.21105/joss.08912",
+   "keys": [
+    "doi:10.21105/joss.08912",
+    "title:fdtdxhighperformanceopensourcefdtdsimulationwithautomaticdifferentiation"
+   ]
+  },
+  {
+   "title": "Solving Maxwell's Equations Through Message Passing on Graphs",
+   "authors": [
+    "Stefanos Bakirtzis",
+    "Marco Fiore",
+    "Jie Zhang",
+    "Ian James Wassell"
+   ],
+   "year": 2026,
+   "publication_date": "2026-01-01",
+   "venue": "IEEE journal on multiscale and multiphysics computational techniques",
+   "url": "https://doi.org/10.1109/jmmct.2026.3708995",
+   "doi": "10.1109/jmmct.2026.3708995",
+   "arxiv": null,
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s",
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-01-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1109/jmmct.2026.3708995",
+   "keys": [
+    "doi:10.1109/jmmct.2026.3708995",
+    "title:solvingmaxwellsequationsthroughmessagepassingongraphs"
+   ]
+  },
+  {
+   "title": "Scaling metasurface design: from reusable unit cells to full-metasurface inverse design",
+   "authors": [
+    "Eunbi Jang",
+    "Jiwan Hong",
+    "Ho-Jun Lee",
+    "Seokju Choi",
+    "Hyewon Suk",
+    "Chanik Kang",
+    "Sunae So",
+    "Haejun Chung"
+   ],
+   "year": 2026,
+   "publication_date": "2026-01-01",
+   "venue": "Opto-Electronic Science",
+   "url": "https://doi.org/10.29026/oes.2026.260058",
+   "doi": "10.29026/oes.2026.260058",
+   "arxiv": null,
+   "cites": [
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-01-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.29026/oes.2026.260058",
+   "keys": [
+    "doi:10.29026/oes.2026.260058",
+    "title:scalingmetasurfacedesignfromreusableunitcellstofullmetasurfaceinversedesign"
+   ]
+  },
+  {
+   "title": "人工智能在超快光子芯片设计中的应用与发展（特邀）",
+   "authors": [
+    "Chen-Ze Ma",
+    "Ming Zhu",
+    "Shuang Zhou",
+    "Zhong-Wei Wu",
+    "Wei-Feng Yang"
+   ],
+   "year": 2026,
+   "publication_date": null,
+   "venue": "Laser &amp; Optoelectronics Progress",
+   "url": "https://doi.org/10.3788/lop260631",
+   "doi": "10.3788/lop260631",
+   "arxiv": null,
+   "cites": [
+    "multi-agent-reinforcement-learning-for-inverse-design-in-pho"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2026-01-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.3788/lop260631",
+   "keys": [
+    "doi:10.3788/lop260631"
+   ]
+  },
+  {
+   "title": "Physics-informed Neural Operators for Predicting 3D Electromagnetic Fields Transformed by Metasurfaces",
+   "authors": [
+    "Orkun Furat",
+    "V. C. Gogineni",
+    "Henrik Bindslev",
+    "E. Nadimi"
+   ],
+   "year": 2025,
+   "publication_date": "2025-12-17",
+   "venue": null,
+   "url": "https://arxiv.org/abs/2512.15694",
+   "doi": null,
+   "arxiv": "2512.15694",
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-12-17",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2512.15694",
+   "keys": [
+    "arxiv:2512.15694",
+    "title:physicsinformedneuraloperatorsforpredicting3delectromagneticfieldstransformedbymetasurfaces"
+   ]
+  },
+  {
+   "title": "PyMieDiff: A differentiable Mie scattering library",
+   "authors": [
+    "Oscar Jackson",
+    "Simone De Liberato",
+    "Otto L. Muskens",
+    "Peter R. Wiecha"
+   ],
+   "year": 2025,
+   "publication_date": "2025-12-09",
+   "venue": "APL Photonics",
+   "url": "https://doi.org/10.1063/5.0316814",
+   "doi": "10.1063/5.0316814",
+   "arxiv": "2512.08614",
+   "cites": [
+    "fdtdx-high-performance-open-source-fdtd-simulation-with-auto"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-12-09",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1063/5.0316814",
+   "keys": [
+    "doi:10.1063/5.0316814",
+    "title:pymiediffadifferentiablemiescatteringlibrary",
+    "arxiv:2512.08614"
+   ]
+  },
+  {
+   "title": "Ensemble-Based Global Search Framework for the Design Optimization of Fabrication-Constrained Freeform Devices",
+   "authors": [
+    "S. Min",
+    "Junhyung Park",
+    "Jonghwa Shin"
+   ],
+   "year": 2025,
+   "publication_date": "2025-11-07",
+   "venue": null,
+   "url": "https://arxiv.org/abs/2511.05041",
+   "doi": null,
+   "arxiv": "2511.05041",
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-11-07",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2511.05041",
+   "keys": [
+    "arxiv:2511.05041",
+    "title:ensemblebasedglobalsearchframeworkforthedesignoptimizationoffabricationconstrainedfreeformdevices"
+   ]
+  },
+  {
+   "title": "Experimental characterization and analysis of an adjoint method inverse design compact edge coupler solution",
+   "authors": [
+    "Bernard M. Melus",
+    "Joseph S. Suelzer",
+    "Ronald M. Reano"
+   ],
+   "year": 2025,
+   "publication_date": "2025-09-23",
+   "venue": "Optics Express",
+   "url": "https://doi.org/10.1364/oe.568166",
+   "doi": "10.1364/oe.568166",
+   "arxiv": null,
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-09-23",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1364/oe.568166",
+   "keys": [
+    "doi:10.1364/oe.568166",
+    "title:experimentalcharacterizationandanalysisofanadjointmethodinversedesigncompactedgecouplersolution"
+   ]
+  },
+  {
+   "title": "Exploiting nonlinear incoherent image formation through linear volume metaoptics for inference [Invited]",
+   "authors": [
+    "Nan Zhang",
+    "Alireza Keshvari",
+    "Ata Shakeri",
+    "Zin Lin"
+   ],
+   "year": 2025,
+   "publication_date": "2025-08-26",
+   "venue": "Journal of the Optical Society of America B",
+   "url": "https://doi.org/10.1364/josab.577452",
+   "doi": "10.1364/josab.577452",
+   "arxiv": "2508.19436",
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-08-26",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1364/josab.577452",
+   "keys": [
+    "doi:10.1364/josab.577452",
+    "title:exploitingnonlinearincoherentimageformationthroughlinearvolumemetaopticsforinferenceinvited",
+    "arxiv:2508.19436",
+    "title:exploitingnonlinearincoherentimageformationthroughlinearvolumemetaopticsforinference"
+   ]
+  },
+  {
+   "title": "Perspective: Topological photonics in nanoscaled systems with far-field radiation and polarization singularities",
+   "authors": [
+    "G. Salerno"
+   ],
+   "year": 2025,
+   "publication_date": "2025-08-25",
+   "venue": "Applied Physics Letters",
+   "url": "https://doi.org/10.1063/5.0283167",
+   "doi": "10.1063/5.0283167",
+   "arxiv": "2508.20487",
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-08-25",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1063/5.0283167",
+   "keys": [
+    "doi:10.1063/5.0283167",
+    "title:perspectivetopologicalphotonicsinnanoscaledsystemswithfarfieldradiationandpolarizationsingularities",
+    "arxiv:2508.20487"
+   ]
+  },
+  {
+   "title": "MCP‐enabled LLM for meta‐optics inverse design: leveraging differentiable solver without LLM expertise",
+   "authors": [
+    "Yi Huang",
+    "Bowen Zheng",
+    "Yunxi Dong",
+    "Hong Tang",
+    "Huan Zhao",
+    "Rakibul Hasan Shawon",
+    "Sensong An",
+    "Hualiang Zhang"
+   ],
+   "year": 2025,
+   "publication_date": "2025-08-14",
+   "venue": "Nanophotonics",
+   "url": "https://doi.org/10.1515/nanoph-2025-0507",
+   "doi": "10.1515/nanoph-2025-0507",
+   "arxiv": "2508.10277",
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-08-14",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1515/nanoph-2025-0507",
+   "keys": [
+    "doi:10.1515/nanoph-2025-0507",
+    "title:mcpenabledllmformetaopticsinversedesignleveragingdifferentiablesolverwithoutllmexpertise",
+    "arxiv:2508.10277"
+   ]
+  },
+  {
+   "title": "A Hardware-Accelerated FDTD Solver for the Optimization and Design of a Wideband Beam-Steerable Reflectarray",
+   "authors": [
+    "Damian Marek",
+    "Weiliang Jin"
+   ],
+   "year": 2025,
+   "publication_date": "2025-07-13",
+   "venue": "Digest - IEEE Antennas and Propagation Society. International Symposium",
+   "url": "https://doi.org/10.1109/ap-s/cnc-usnc-ursi55537.2025.11266615",
+   "doi": "10.1109/ap-s/cnc-usnc-ursi55537.2025.11266615",
+   "arxiv": null,
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-07-13",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1109/ap-s/cnc-usnc-ursi55537.2025.11266615",
+   "keys": [
+    "doi:10.1109/ap-s/cnc-usnc-ursi55537.2025.11266615",
+    "title:ahardwareacceleratedfdtdsolverfortheoptimizationanddesignofawidebandbeamsteerablereflectarray"
+   ]
+  },
+  {
+   "title": "Decoding multimodal spectra of chiral plasmonic nanoantennas using deep learning",
+   "authors": [
+    "Yu-Lu Qin",
+    "Hai-Xia Zheng",
+    "Hao-Yang Cheng",
+    "Han-Min Hu",
+    "Xiao-Long Zhou"
+   ],
+   "year": 2025,
+   "publication_date": "2025-07-01",
+   "venue": "Journal of Nanophotonics",
+   "url": "https://doi.org/10.1117/1.jnp.19.036011",
+   "doi": "10.1117/1.jnp.19.036011",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-07-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1117/1.jnp.19.036011",
+   "keys": [
+    "doi:10.1117/1.jnp.19.036011",
+    "title:decodingmultimodalspectraofchiralplasmonicnanoantennasusingdeeplearning"
+   ]
+  },
+  {
+   "title": "Inverse Design in Nanophotonics via Representation Learning",
+   "authors": [
+    "Reza Marzban",
+    "Ali Adibi",
+    "Raphaël Pestourie"
+   ],
+   "year": 2025,
+   "publication_date": "2025-07-01",
+   "venue": "Advanced Optical Materials",
+   "url": "https://doi.org/10.1002/adom.202502062",
+   "doi": "10.1002/adom.202502062",
+   "arxiv": "2507.00546",
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-07-01",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1002/adom.202502062",
+   "keys": [
+    "doi:10.1002/adom.202502062",
+    "title:inversedesigninnanophotonicsviarepresentationlearning",
+    "arxiv:2507.00546"
+   ]
+  },
+  {
+   "title": "Multi-Agent Reinforcement Learning for Inverse Design in Photonic Integrated Circuits",
+   "authors": [
+    "Yannik Mahlau",
+    "Maximilian Schier",
+    "Christoph Reinders",
+    "Frederik Schubert",
+    "Marco Bügling",
+    "Bodo Rosenhahn"
+   ],
+   "year": 2025,
+   "publication_date": "2025-06-23",
+   "venue": "arXiv.org",
+   "url": "https://doi.org/10.48550/arxiv.2506.18627",
+   "doi": "10.48550/arxiv.2506.18627",
+   "arxiv": "2506.18627",
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits",
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s",
+    "mastering-zero-shot-interactions-in-cooperative-and-competit"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": true,
+   "first_seen": "2025-06-23",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2506.18627",
+   "keys": [
+    "arxiv:2506.18627",
+    "title:multiagentreinforcementlearningforinversedesigninphotonicintegratedcircuits"
+   ]
+  },
+  {
+   "title": "TorchGDM: A GPU-accelerated Python toolkit for multi-scale electromagnetic scattering with automatic differentiation",
+   "authors": [
+    "Sofia Ponomareva",
+    "Adelin Patoux",
+    "Clément Majorel",
+    "Antoine Azéma",
+    "Aurélien Cuche",
+    "Christian Girard",
+    "Arnaud Arbouet",
+    "Peter R. Wiecha"
+   ],
+   "year": 2025,
+   "publication_date": "2025-05-14",
+   "venue": "SciPost Physics Codebases",
+   "url": "https://doi.org/10.21468/scipostphyscodeb.60",
+   "doi": "10.21468/scipostphyscodeb.60",
+   "arxiv": "2505.09545",
+   "cites": [
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-05-14",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.21468/scipostphyscodeb.60",
+   "keys": [
+    "doi:10.21468/scipostphyscodeb.60",
+    "title:torchgdmagpuacceleratedpythontoolkitformultiscaleelectromagneticscatteringwithautomaticdifferentiation",
+    "arxiv:2505.09545"
+   ]
+  },
+  {
+   "title": "Inverse design of robust out-of-plane coupling elements",
+   "authors": [
+    "Konrad Bethmann",
+    "Yannik Mahlau",
+    "Frederik Schubert",
+    "Marco Munderloh",
+    "Bodo Rosenhahn",
+    "Bernhard Roth",
+    "Jörn Östermann"
+   ],
+   "year": 2025,
+   "publication_date": "2025-03-19",
+   "venue": "Photonic and Phononic Properties of Engineered Nanostructures",
+   "url": "https://doi.org/10.1117/12.3053078",
+   "doi": "10.1117/12.3053078",
+   "arxiv": null,
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits",
+    "a-flexible-framework-for-large-scale-fdtd-simulations-open-s"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": true,
+   "first_seen": "2025-03-19",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1117/12.3053078",
+   "keys": [
+    "doi:10.1117/12.3053078",
+    "title:inversedesignofrobustoutofplanecouplingelements"
+   ]
+  },
+  {
+   "title": "Topology Optimization of a Superabsorbing Thin-Film Semiconductor Metasurface",
+   "authors": [
+    "Johannes Gedeon",
+    "Izzatjon Allayarov",
+    "Emadeldeen Hassan",
+    "Antonio Calà Lesina"
+   ],
+   "year": 2025,
+   "publication_date": "2025-02-26",
+   "venue": "IEEE Transactions on Antennas and Propagation",
+   "url": "https://doi.org/10.1109/tap.2025.3590211",
+   "doi": "10.1109/tap.2025.3590211",
+   "arxiv": "2502.19352",
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2025-02-26",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1109/tap.2025.3590211",
+   "keys": [
+    "doi:10.1109/tap.2025.3590211",
+    "title:topologyoptimizationofasuperabsorbingthinfilmsemiconductormetasurface",
+    "arxiv:2502.19352"
+   ]
+  },
+  {
+   "title": "A flexible framework for large-scale FDTD simulations: open-source inverse design for 3D nanostructures",
+   "authors": [
+    "Yannik Mahlau",
+    "Frederik Schubert",
+    "Konrad Bethmann",
+    "Reinhard Caspary",
+    "Antonio Calà Lesina",
+    "Marco Munderloh",
+    "Jörn Östermann",
+    "Bodo Rosenhahn"
+   ],
+   "year": 2024,
+   "publication_date": "2024-12-16",
+   "venue": "Photonic and Phononic Properties of Engineered Nanostructures",
+   "url": "https://doi.org/10.1117/12.3052639",
+   "doi": "10.1117/12.3052639",
+   "arxiv": "2412.12360",
+   "cites": [
+    "quantized-inverse-design-for-photonic-integrated-circuits"
+   ],
+   "sources": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "self_citation": true,
+   "first_seen": "2024-12-16",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "doi:10.1117/12.3052639",
+   "keys": [
+    "doi:10.1117/12.3052639",
+    "title:aflexibleframeworkforlargescalefdtdsimulationsopensourceinversedesignfor3dnanostructures",
+    "arxiv:2412.12360"
+   ]
+  },
+  {
+   "title": "PCIM: Learning Pixel Attributions via Pixel-wise Channel Isolation Mixing in High Content Imaging",
+   "authors": [
+    "Daniel Siegismund",
+    "Mario Wieser",
+    "S. Heyse",
+    "Stephan Steigele"
+   ],
+   "year": 2024,
+   "publication_date": "2024-12-03",
+   "venue": "SLAS discovery : advancing life sciences R & D",
+   "url": "https://doi.org/10.1016/j.slasd.2025.100287",
+   "doi": "10.1016/j.slasd.2025.100287",
+   "arxiv": "2412.02275",
+   "cites": [
+    "fidelity-of-ensemble-aggregation-for-saliency-map-explanatio"
+   ],
+   "sources": [
+    "semanticscholar"
+   ],
+   "self_citation": false,
+   "first_seen": "2024-12-03",
+   "first_seen_estimated": true,
+   "last_seen": "2026-11-02",
+   "uid": "arxiv:2412.02275",
+   "keys": [
+    "arxiv:2412.02275",
+    "doi:10.1016/j.slasd.2025.100287",
+    "title:pcimlearningpixelattributionsviapixelwisechannelisolationmixinginhighcontentimaging"
+   ]
+  }
+ ]
+}
