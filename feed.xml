@@ -3,6 +3,33 @@
   <title>New citations of Yannik Mahlau</title>
   <link href="https://ymahlau.github.io/citations/"/>
   <id>https://ymahlau.github.io/citations/</id>
-  <updated>2026-11-02T10:07:53Z</updated>
-
+  <updated>2026-11-06T08:38:27Z</updated>
+  <entry>
+    <title>Roadmap on 5D Photonics for nano and beyond</title>
+    <link href="https://doi.org/10.1088/2399-1984/ae8631"/>
+    <id>https://ymahlau.github.io/citations/#doi:10.1088/2399-1984/ae8631</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Ayhan Demircan, Andrey B. Evlyukhin, Uwe Morgner, Oliver Melchert, Ihar Babushkin, Shihao Zhang. Nano Futures 2026. Cites: Gradient-informed Bayesian and interior point optimization for efficient inverse design in nanophotonics</summary>
+  </entry>
+  <entry>
+    <title>Smart Electro-Optic Polymers and Their Applications</title>
+    <link href="https://doi.org/10.1007/978-3-032-21977-0_12"/>
+    <id>https://ymahlau.github.io/citations/#doi:10.1007/978-3-032-21977-0_12</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Abhayakrishna Bhat, Sai Pavan Prashanth Sadhu. Springer series in materials science 2026. Cites: A flexible framework for large-scale FDTD simulations: open-source inverse design for 3D nanostructures</summary>
+  </entry>
+  <entry>
+    <title>Explainable AI for inverse-design of optical network on chip routers</title>
+    <link href="https://doi.org/10.1515/joc-2025-0384"/>
+    <id>https://ymahlau.github.io/citations/#doi:10.1515/joc-2025-0384</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Jotiram Krishna Deshmukh, Kantilal Pitambar Rane, Milind P. Gajare, Monali Chaudhari. Journal of Optical Communications 2025. Cites: Quantized Inverse Design for Photonic Integrated Circuits</summary>
+  </entry>
+  <entry>
+    <title>Metaoptic Computational Imaging</title>
+    <link href="https://doi.org/10.1021/acsphotonics.4c02266"/>
+    <id>https://ymahlau.github.io/citations/#doi:10.1021/acsphotonics.4c02266</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Charles Roques‐Carmes, Kai Wang, Yuanmu Yang, Arka Majumdar, Zin Lin. ACS Photonics 2025. Cites: Quantized Inverse Design for Photonic Integrated Circuits</summary>
+  </entry>
 </feed>
